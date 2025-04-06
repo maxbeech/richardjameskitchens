@@ -21,7 +21,7 @@ export default function FadeIn({
 }: FadeInProps) {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { once, margin: '-100px' });
+  const inView = useInView(ref, { once });
   
   useEffect(() => {
     if (inView) {
@@ -33,27 +33,27 @@ export default function FadeIn({
 
   // Set initial and animation variants based on direction
   const getVariants = () => {
-    let hidden = { opacity: 0 };
+    let initial: any = { opacity: 0 };
     
     switch (direction) {
       case 'up':
-        hidden = { ...hidden, y: 40 };
+        initial = { ...initial, y: 40 };
         break;
       case 'down':
-        hidden = { ...hidden, y: -40 };
+        initial = { ...initial, y: -40 };
         break;
       case 'left':
-        hidden = { ...hidden, x: 40 };
+        initial = { ...initial, x: 40 };
         break;
       case 'right':
-        hidden = { ...hidden, x: -40 };
+        initial = { ...initial, x: -40 };
         break;
       default:
         break;
     }
     
     return {
-      hidden,
+      hidden: initial,
       visible: { 
         opacity: 1,
         y: 0,

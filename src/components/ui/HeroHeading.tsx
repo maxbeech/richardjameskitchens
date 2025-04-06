@@ -19,7 +19,7 @@ export default function HeroHeading({
 }: HeroHeadingProps) {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, threshold: 0.1 });
+  const inView = useInView(ref, { once: true });
   
   useEffect(() => {
     if (inView) {

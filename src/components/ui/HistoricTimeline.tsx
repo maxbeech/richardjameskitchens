@@ -37,7 +37,6 @@ export default function HistoricTimeline({ events, className = '' }: HistoricTim
 function TimelineItem({ event, index, isLeft }: { event: TimelineEvent, index: number, isLeft: boolean }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
   });
   
   const variants = {

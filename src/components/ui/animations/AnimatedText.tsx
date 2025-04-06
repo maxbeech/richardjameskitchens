@@ -25,7 +25,7 @@ export default function AnimatedText({
 }: AnimatedTextProps) {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { once, threshold: 0.1 });
+  const inView = useInView(ref, { once });
   
   useEffect(() => {
     if (inView) {
