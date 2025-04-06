@@ -3,23 +3,18 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Inter } from 'next/font/google';
-import { Playfair_Display } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
-  title: 'Bramble and Bay | Est. 1888',
-  description: 'Bramble and Bay - A premier tennis and squash club established in 1888, offering excellent facilities, coaching, and a vibrant social scene.',
-  keywords: 'tennis club, squash club, Bramble and Bay, tennis coaching, squash coaching, tennis courts, squash courts',
+  title: 'Bramble & Bay Interiors | Bespoke Curtains & Blinds | Surrey & Hampshire',
+  description: 'Bramble & Bay Interiors create beautiful handmade, made-to-measure curtains, blinds and soft furnishings, designed to add gorgeous and unique finishing touches to your home.',
+  keywords: 'bespoke curtains, made-to-measure blinds, soft furnishings, curtain maker Surrey, blind maker Hampshire, interior design, luxury window treatments',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
-    ],
-    apple: [
-      { url: '/favicon.svg', type: 'image/svg+xml' }
     ]
   }
 };
@@ -36,7 +31,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${inter.variable} ${playfair.variable} antialiased text-gray-900 bg-neutral-50`}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
