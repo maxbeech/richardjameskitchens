@@ -10,21 +10,39 @@ import { useInView } from 'react-intersection-observer';
 const navItems = [
   { name: 'Home', path: '/' },
   { 
-    name: 'About', 
+    name: 'About Us', 
     path: '/about',
+    subItems: [
+      { name: 'Our Story', path: '/about' },
+      { name: 'Our Process', path: '/about/process' },
+      { name: 'Our Team', path: '/about/team' },
+      { name: 'Why Choose Us', path: '/about/why-choose-us' },
+    ]
+  },
+  { 
+    name: 'Collections', 
+    path: '/collections',
+    subItems: [
+      { name: 'Collections Overview', path: '/collections' },
+      { name: 'Bella Range', path: '/collections/bella' },
+      { name: 'Wilton Range', path: '/collections/wilton' },
+      { name: 'Zurfiz Range', path: '/collections/zurfiz' },
+    ] 
   },
   { 
     name: 'Services', 
     path: '/services',
     subItems: [
-      { name: 'Our Services', path: '/services' },
-      { name: 'Curtains', path: '/services/curtains' },
-      { name: 'Blinds', path: '/services/blinds' },
-      { name: 'Soft Furnishings', path: '/services/soft-furnishings' },
-      { name: 'Tracks and Poles', path: '/services/tracks-and-poles' },
+      { name: 'Design Consultation', path: '/services/design-consultation' },
+      { name: 'Installation', path: '/services/installation' },
+      { name: 'Kitchens', path: '/services/kitchens' },
+      { name: 'Pantries', path: '/services/pantries' },
+      { name: 'Boot Rooms', path: '/services/boot-rooms' },
+      { name: 'Home Bars', path: '/services/home-bars' },
     ] 
   },
-  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Gallery', path: '/gallery' },
+  { name: 'Testimonials', path: '/testimonials' },
   { name: 'Contact', path: '/contact' }
 ];
 
@@ -66,12 +84,14 @@ export default function Header() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center">
-              <div className="h-16 w-16 relative">
+              <div className="h-16 w-48 relative">
                 <Image 
-                  src="/images/logo.png" 
-                  alt="Bramble & Bay Logo" 
+                  src="/images/logo.svg" 
+                  alt="Richard James Kitchens Logo" 
                   fill
-                  className="object-contain"
+                  className={`object-contain transition-all duration-300 ${
+                    scrolled ? '' : 'brightness-0 invert'
+                  }`}
                   priority
                 />
               </div>
@@ -92,7 +112,7 @@ export default function Header() {
                   <>
                     <button
                       onClick={() => handleDropdownToggle(item.name)}
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:text-secondary 
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:text-secondary uppercase tracking-wider 
                         ${pathname?.startsWith(item.path) ? 'text-secondary' : scrolled ? 'text-gray-800' : 'text-white'}`}
                     >
                       {item.name}
@@ -105,7 +125,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 5 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 overflow-hidden"
+                          className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 overflow-hidden"
                         >
                           <div className="py-1">
                             {item.subItems.map((subItem) => (
@@ -126,7 +146,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.path}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:text-secondary
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:text-secondary uppercase tracking-wider
                       ${pathname === item.path ? 'text-secondary' : scrolled ? 'text-gray-800' : 'text-white'}`}
                   >
                     {item.name}
@@ -141,7 +161,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="ml-2 px-5 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary-600 transition-colors shadow-sm hover:shadow-md"
+                className="ml-2 px-5 py-2 bg-secondary text-white rounded-md text-sm font-medium hover:bg-secondary-600 transition-colors shadow-sm hover:shadow-md uppercase tracking-wider"
               >
                 Get a Quote
               </Link>
@@ -166,13 +186,13 @@ export default function Header() {
       <div className={`hidden md:block bg-primary/90 text-white transition-all duration-300 mt-2 ${scrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
         <div className="container mx-auto px-4 py-1">
           <div className="flex justify-end items-center space-x-6 text-sm">
-            <a href="tel:07490934251" className="flex items-center hover:text-gray-200 transition-colors">
+            <a href="tel:07000123456" className="flex items-center hover:text-gray-200 transition-colors">
               <FaPhone className="h-3 w-3 mr-2" />
-              <span>07490 934251</span>
+              <span>07000 123456</span>
             </a>
-            <a href="mailto:suzy@brambleandbay.co.uk" className="flex items-center hover:text-gray-200 transition-colors">
+            <a href="mailto:info@richardjameskitchens.co.uk" className="flex items-center hover:text-gray-200 transition-colors">
               <FaEnvelope className="h-3 w-3 mr-2" />
-              <span>suzy@brambleandbay.co.uk</span>
+              <span>info@richardjameskitchens.co.uk</span>
             </a>
           </div>
         </div>
@@ -195,7 +215,7 @@ export default function Header() {
                     <>
                       <button
                         onClick={() => handleDropdownToggle(item.name)}
-                        className={`w-full text-left px-3 py-3 rounded-md text-base font-medium flex justify-between items-center
+                        className={`w-full text-left px-3 py-3 rounded-md text-base font-medium flex justify-between items-center uppercase tracking-wider
                           ${pathname?.startsWith(item.path) ? 'text-secondary' : 'text-gray-800'}`}
                       >
                         {item.name}
@@ -228,7 +248,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.path}
-                      className={`block px-3 py-3 rounded-md text-base font-medium
+                      className={`block px-3 py-3 rounded-md text-base font-medium uppercase tracking-wider
                         ${pathname === item.path ? 'text-secondary' : 'text-gray-800'}`}
                       onClick={toggleMobileMenu}
                     >

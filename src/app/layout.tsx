@@ -3,15 +3,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Montserrat, Playfair_Display } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Bramble & Bay Interiors | Bespoke Curtains & Blinds | Surrey & Hampshire',
-  description: 'Bramble & Bay Interiors create beautiful handmade, made-to-measure curtains, blinds and soft furnishings, designed to add gorgeous and unique finishing touches to your home.',
-  keywords: 'bespoke curtains, made-to-measure blinds, soft furnishings, curtain maker Surrey, blind maker Hampshire, interior design, luxury window treatments',
+  title: 'Richard James Kitchens | Bespoke Luxury Kitchens | Surrey & London',
+  description: 'Richard James Kitchens specializes in designing and crafting bespoke, handmade luxury kitchens, combining traditional craftsmanship with innovative design for homes in Surrey, London and beyond.',
+  keywords: 'bespoke kitchens, luxury kitchens, handmade kitchens, kitchen design Surrey, custom kitchens London, kitchen installers, kitchen renovation',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -29,9 +29,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} antialiased text-gray-900 bg-neutral-50`}>
+      <body className={`${montserrat.variable} ${playfair.variable} antialiased text-gray-900 bg-neutral-50`}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">

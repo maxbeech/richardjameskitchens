@@ -1,223 +1,120 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FaFacebook, FaInstagram, FaPinterest, FaHouzz, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="bg-primary text-white pt-16">
+    <footer className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="flex items-center mb-6"
-            >
-              <div className="h-12 w-12 relative mr-4">
-                <Image 
-                  src="/images/logo.png" 
-                  alt="Bramble & Bay Logo" 
-                  fill
-                  className="object-contain brightness-0 invert"
-                />
-              </div>
-              <div>
-                <h3 className="font-serif text-xl">Bramble & Bay</h3>
-                <p className="text-sm text-white/70">Interiors</p>
-              </div>
-            </motion.div>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="mb-6 text-white/80"
-            >
-              Beautiful handmade, made-to-measure curtains, blinds and soft furnishings, designed to add gorgeous and unique finishing touches to your home.
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="flex space-x-4"
-            >
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
-                aria-label="Facebook"
-              >
-                <FaFacebook size={22} />
+          {/* Logo and About */}
+          <div className="space-y-4">
+            <div className="relative h-16 w-40">
+              <Image 
+                src="/images/logo.svg" 
+                alt="Richard James Kitchens Logo"
+                fill
+                className="object-contain brightness-0 invert"
+              />
+            </div>
+            <p className="text-sm leading-relaxed text-gray-300 mt-4">
+              Richard James Kitchens specializes in crafting bespoke, handmade luxury kitchens, 
+              combining traditional craftsmanship with innovative design for homes in Surrey, 
+              London and beyond.
+            </p>
+            <div className="flex space-x-3 pt-2">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <FaFacebook className="w-5 h-5" />
               </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={22} />
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <FaInstagram className="w-5 h-5" />
               </a>
-            </motion.div>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <FaPinterest className="w-5 h-5" />
+              </a>
+              <a href="https://houzz.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                <FaHouzz className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           
+          {/* Quick Links */}
           <div>
-            <motion.h3 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-lg font-medium mb-5 border-b border-white/20 pb-2"
-            >
-              Quick Links
-            </motion.h3>
-            <motion.ul 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="space-y-3"
-            >
-              <li>
-                <Link href="/" className="text-white/70 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-white/70 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white/70 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/curtains" className="text-white/70 hover:text-white transition-colors">
-                  Curtains
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/blinds" className="text-white/70 hover:text-white transition-colors">
-                  Blinds
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio" className="text-white/70 hover:text-white transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </motion.ul>
+            <h3 className="text-lg font-serif font-medium mb-4 border-b border-gray-700 pb-2">Explore</h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/collections" className="text-gray-300 hover:text-white transition-colors text-sm">Collections</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">Services</Link></li>
+              <li><Link href="/gallery" className="text-gray-300 hover:text-white transition-colors text-sm">Gallery</Link></li>
+              <li><Link href="/testimonials" className="text-gray-300 hover:text-white transition-colors text-sm">Testimonials</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</Link></li>
+            </ul>
           </div>
           
+          {/* Collections */}
           <div>
-            <motion.h3 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-lg font-medium mb-5 border-b border-white/20 pb-2"
-            >
-              Contact Info
-            </motion.h3>
-            <motion.ul 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
+            <h3 className="text-lg font-serif font-medium mb-4 border-b border-gray-700 pb-2">Our Collections</h3>
+            <ul className="space-y-2">
+              <li><Link href="/collections/bella" className="text-gray-300 hover:text-white transition-colors text-sm">Bella Range</Link></li>
+              <li><Link href="/collections/wilton" className="text-gray-300 hover:text-white transition-colors text-sm">Wilton Range</Link></li>
+              <li><Link href="/collections/zurfiz" className="text-gray-300 hover:text-white transition-colors text-sm">Zurfiz Range</Link></li>
+              <li><Link href="/services/pantries" className="text-gray-300 hover:text-white transition-colors text-sm">Pantries</Link></li>
+              <li><Link href="/services/boot-rooms" className="text-gray-300 hover:text-white transition-colors text-sm">Boot Rooms</Link></li>
+              <li><Link href="/services/home-bars" className="text-gray-300 hover:text-white transition-colors text-sm">Home Bars</Link></li>
+            </ul>
+          </div>
+          
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-serif font-medium mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
+            <ul className="space-y-3">
               <li className="flex items-start">
-                <FaMapMarkerAlt className="text-white mt-1 mr-3 flex-shrink-0" />
-                <span className="text-white/70">Horsell Studio, Surrey</span>
+                <FaMapMarkerAlt className="w-5 h-5 text-secondary mr-3 mt-1" />
+                <span className="text-sm text-gray-300">Richard James Kitchens<br />123 Kitchen Street<br />Surrey, UK</span>
               </li>
-              <li className="flex items-start">
-                <FaPhone className="text-white mt-1 mr-3 flex-shrink-0" />
-                <a href="tel:07490934251" className="text-white/70 hover:text-white transition-colors">
-                  07490 934251
+              <li className="flex items-center">
+                <FaPhone className="w-4 h-4 text-secondary mr-3" />
+                <a href="tel:07000123456" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  07000 123456
                 </a>
               </li>
-              <li className="flex items-start">
-                <FaEnvelope className="text-white mt-1 mr-3 flex-shrink-0" />
-                <a href="mailto:suzy@brambleandbay.co.uk" className="text-white/70 hover:text-white transition-colors">
-                  suzy@brambleandbay.co.uk
+              <li className="flex items-center">
+                <FaEnvelope className="w-4 h-4 text-secondary mr-3" />
+                <a href="mailto:info@richardjameskitchens.co.uk" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  info@richardjameskitchens.co.uk
                 </a>
               </li>
-              <li className="flex items-start">
-                <FaClock className="text-white mt-1 mr-3 flex-shrink-0" />
-                <span className="text-white/70">By appointment only</span>
-              </li>
-            </motion.ul>
+            </ul>
           </div>
-          
-          <div>
-            <motion.h3 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-lg font-medium mb-5 border-b border-white/20 pb-2"
-            >
-              Our Services
-            </motion.h3>
-            <motion.ul 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="space-y-3"
-            >
-              <li className="text-white/70">Bespoke Curtains</li>
-              <li className="text-white/70">Made-to-measure Blinds</li>
-              <li className="text-white/70">Roman Blinds</li>
-              <li className="text-white/70">Soft Furnishings</li>
-              <li className="text-white/70">Cushions & Accessories</li>
-              <li className="text-white/70">Tracks and Poles</li>
-              <li className="text-white/70">Home Consultations</li>
-            </motion.ul>
+        </div>
+        
+        {/* Policies and Copyright */}
+        <div className="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-xs text-gray-400 mb-4 md:mb-0"
+          >
+            &copy; {new Date().getFullYear()} Richard James Kitchens. All rights reserved.
+          </motion.p>
+          <div className="flex space-x-6">
+            <Link href="/privacy-policy" className="text-xs text-gray-400 hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="text-xs text-gray-400 hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/sitemap" className="text-xs text-gray-400 hover:text-white transition-colors">
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>
-      
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="border-t border-white/10 mt-12"
-      >
-        <div className="container mx-auto py-6 px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Bramble & Bay Interiors. All Rights Reserved.
-            </p>
-            <div className="flex space-x-4 text-sm text-white/60">
-              <Link href="/privacy-policy" className="hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
-                Terms
-              </Link>
-              <span className="text-white/30">Website by <a href="#" className="text-white/60 hover:text-white transition-colors">Maxed Labs</a></span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </footer>
   );
 } 
