@@ -18,8 +18,8 @@ export default function OptimizedImage({
   src,
   alt,
   className = '',
-  width,
-  height,
+  width = 1200,
+  height = 800,
   fill = false,
   priority = false,
   sizes = '100vw',
@@ -31,8 +31,8 @@ export default function OptimizedImage({
       src={src}
       alt={alt}
       className={className}
-      width={fill ? undefined : width}
-      height={fill ? undefined : height}
+      width={fill ? width : width}
+      height={fill ? height : height}
       fill={fill}
       priority={priority}
       sizes={sizes}
