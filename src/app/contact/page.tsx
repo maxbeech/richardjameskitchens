@@ -51,41 +51,41 @@ export default function ContactPage() {
     {
       icon: <FaPhone className="h-5 w-5 text-secondary" />,
       title: 'Phone',
-      value: '07490 934251',
-      link: 'tel:07490934251'
+      value: '0208 050 0790',
+      link: 'tel:02080500790'
     },
     {
       icon: <FaEnvelope className="h-5 w-5 text-secondary" />,
       title: 'Email',
-      value: 'suzy@brambleandbay.co.uk',
-      link: 'mailto:suzy@brambleandbay.co.uk'
+      value: 'info@richardjameskitchens.co.uk',
+      link: 'mailto:info@richardjameskitchens.co.uk'
     },
     {
       icon: <FaMapMarkerAlt className="h-5 w-5 text-secondary" />,
       title: 'Studio Location',
-      value: 'Horsell, Surrey, UK',
-      link: 'https://maps.google.com/?q=Horsell,Surrey,UK'
+      value: 'Unit 10 - 143 Bletchingly Road, Merstham, Surrey, RH1 3QN',
+      link: 'https://maps.google.com/?q=143+Bletchingly+Road,Merstham,Surrey,RH1+3QN'
     },
     {
       icon: <FaInstagram className="h-5 w-5 text-secondary" />,
       title: 'Instagram',
-      value: '@brambleandbay',
-      link: 'https://instagram.com/brambleandbay'
+      value: '@richardjameskitchens',
+      link: 'https://instagram.com/richardjameskitchens'
     },
     {
       icon: <FaFacebookF className="h-5 w-5 text-secondary" />,
       title: 'Facebook',
-      value: 'Bramble & Bay Interiors',
-      link: 'https://facebook.com/brambleandbay'
+      value: 'Richard James Kitchens',
+      link: 'https://facebook.com/richardjameskitchens'
     }
   ];
 
   const services = [
     { value: '', label: 'Select a service' },
-    { value: 'curtains', label: 'Curtains' },
-    { value: 'blinds', label: 'Blinds' },
-    { value: 'soft-furnishings', label: 'Soft Furnishings' },
-    { value: 'tracks-and-poles', label: 'Tracks and Poles' },
+    { value: 'kitchen-renovation', label: 'Kitchen Renovation - Doors/worktop' },
+    { value: 'bespoke-kitchen', label: 'Bespoke Kitchen' },
+    { value: 'replacement-kitchen', label: 'Replacement Kitchen (Standard size unit)' },
+    { value: 'supply-only', label: 'Supply Only' },
     { value: 'consultation', label: 'Design Consultation' },
     { value: 'other', label: 'Other' }
   ];
@@ -93,22 +93,20 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
+      <section className="hero-section h-[40vh] lg:h-[50vh]">
         <div className="absolute inset-0">
           <ParallaxImage 
-            src="/images/window_curtain-1.webp" 
-            alt="Contact Bramble & Bay Interiors"
+            src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_fd9a4e77bd4c4e22a8a18eb3f25e50c5~mv2.jpg" 
+            alt="Contact Richard James Kitchens"
             speed={-10}
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
-            <HeroHeading
-              title="Contact Us"
-              className="text-5xl font-serif text-white font-medium max-w-3xl"
-            />
-          </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <HeroHeading
+            title="Contact Us"
+            className="text-5xl font-serif text-white font-medium max-w-3xl"
+          />
         </div>
       </section>
 
@@ -121,7 +119,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-xl shadow-lg p-8 lg:p-10">
                 <h2 className="text-3xl font-serif text-primary mb-6">Get in Touch</h2>
                 <p className="text-gray-600 mb-8">
-                  Ready to transform your space with beautiful handmade soft furnishings? Fill out the form below to discuss your project or request a consultation.
+                  Ready to transform your kitchen into a beautiful and functional space? Fill out the form below to discuss your project or request a consultation.
                 </p>
                 
                 {submitSuccess ? (
@@ -253,7 +251,7 @@ export default function ContactPage() {
                 <div className="mb-10">
                   <h2 className="text-3xl font-serif text-primary mb-6">Contact Information</h2>
                   <p className="text-gray-600 mb-8">
-                    We're based in Horsell, Surrey, and serve clients throughout Surrey and Hampshire. Get in touch using any of the following methods:
+                    We're based in Merstham, Surrey, and serve clients throughout Surrey and Hampshire. Get in touch using any of the following methods:
                   </p>
                   
                   <div className="space-y-6">
@@ -281,14 +279,14 @@ export default function ContactPage() {
               <FadeIn delay={0.3}>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden h-80">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19987.275367245693!2d-0.6003235870086626!3d51.329177233693115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767334159a9e3d%3A0xc85ea225a8af7ebd!2sHorsell%2C%20Woking!5e0!3m2!1sen!2suk!4v1712410064863!5m2!1sen!2suk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2493.7807539650054!2d-0.16098368781876183!3d51.261284227426794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876059c66f7f021%3A0x94a95ed38deb0991!2sBletchingley%20Rd%2C%20Merstham%2C%20Redhill%20RH1%203QN!5e0!3m2!1sen!2suk!4v1712453678412!5m2!1sen!2suk"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Bramble & Bay Location"
+                    title="Richard James Kitchens Location"
                   ></iframe>
                 </div>
               </FadeIn>
@@ -327,7 +325,7 @@ export default function ContactPage() {
               </div>
               
               <p className="text-gray-600 mt-8">
-                Evening and weekend appointments may be available upon request.
+                <strong>Strictly by appointment only</strong>
               </p>
             </div>
           </FadeIn>

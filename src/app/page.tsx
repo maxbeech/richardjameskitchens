@@ -42,7 +42,7 @@ const HeroImageSlider = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="hero-section h-screen">
       {images.map((image, index) => (
         <motion.div 
           key={index}
@@ -79,45 +79,43 @@ const HeroImageSlider = () => {
       </div>
       
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+      <div className="container mx-auto px-4 text-center relative z-10">
+        <motion.h1 
+          className="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          Bespoke Luxury <span className="text-secondary">Kitchens</span>
+        </motion.h1>
+        <motion.p 
+          className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Handmade with exceptional craftsmanship, designed to transform your home
+        </motion.p>
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.7 }}
+        >
+          <Link 
+            href="/collections" 
+            className="bg-secondary hover:bg-secondary-600 text-white px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
           >
-            Bespoke Luxury <span className="text-secondary">Kitchens</span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            Explore Collections
+            <FaAngleRight className="ml-2" />
+          </Link>
+          <Link 
+            href="/contact" 
+            className="bg-transparent text-white border-2 border-white/30 hover:border-white px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
           >
-            Handmade with exceptional craftsmanship, designed to transform your home
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          >
-            <Link 
-              href="/collections" 
-              className="bg-secondary hover:bg-secondary-600 text-white px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
-            >
-              Explore Collections
-              <FaAngleRight className="ml-2" />
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-transparent text-white border-2 border-white/30 hover:border-white px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
-            >
-              Request Consultation
-            </Link>
-          </motion.div>
-        </div>
+            Request Consultation
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
@@ -328,10 +326,10 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <Link 
-              href="/gallery" 
+              href="/collections" 
               className="bg-transparent border-2 border-primary/30 hover:border-primary text-primary px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
             >
-              View Our Gallery
+              View Our Collections
               <FaAngleRight className="ml-2" />
             </Link>
           </motion.div>
@@ -394,7 +392,7 @@ export default function Home() {
               />
               <h3 className="text-xl font-medium text-primary mb-2 font-serif">Pantries</h3>
               <p className="text-gray-600 mb-4">Elegant storage solutions to complement your kitchen</p>
-              <Link href="/services/pantries" className="text-secondary hover:text-secondary-700 font-medium">Learn more</Link>
+              <Link href="/contact" className="text-secondary hover:text-secondary-700 font-medium">Contact us</Link>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-subtle text-center">
               <Image 
@@ -406,7 +404,7 @@ export default function Home() {
               />
               <h3 className="text-xl font-medium text-primary mb-2 font-serif">Boot Rooms</h3>
               <p className="text-gray-600 mb-4">Stylish and practical storage spaces for busy homes</p>
-              <Link href="/services/boot-rooms" className="text-secondary hover:text-secondary-700 font-medium">Learn more</Link>
+              <Link href="/contact" className="text-secondary hover:text-secondary-700 font-medium">Contact us</Link>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-subtle text-center">
               <Image 
@@ -418,7 +416,7 @@ export default function Home() {
               />
               <h3 className="text-xl font-medium text-primary mb-2 font-serif">Home Bars</h3>
               <p className="text-gray-600 mb-4">Luxurious entertainment spaces for your home</p>
-              <Link href="/services/home-bars" className="text-secondary hover:text-secondary-700 font-medium">Learn more</Link>
+              <Link href="/contact" className="text-secondary hover:text-secondary-700 font-medium">Contact us</Link>
             </div>
           </motion.div>
         </div>
@@ -466,10 +464,10 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <Link 
-              href="/testimonials" 
+              href="/contact" 
               className="bg-transparent border-2 border-primary/30 hover:border-primary text-primary px-8 py-4 rounded-md transition-all duration-300 inline-flex items-center justify-center font-medium tracking-wide"
             >
-              Read More Testimonials
+              Contact Us
               <FaAngleRight className="ml-2" />
             </Link>
           </motion.div>

@@ -214,14 +214,14 @@ export default function DesignProcess() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-24">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_2206f9c8b5a34fbfae9a79d8b8c5e9d3~mv2.jpg" 
+            src="/images/products/wilton_range/Final product in kitchen example photos/Kitchen 1.jpg" 
             alt="Richard James Kitchens Design Process" 
             fill
             priority
-            className="object-cover"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

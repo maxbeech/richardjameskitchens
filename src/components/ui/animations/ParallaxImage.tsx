@@ -38,7 +38,7 @@ export default function ParallaxImage({
     <motion.div
       ref={ref}
       className={`relative overflow-hidden ${className}`}
-      style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+      style={{ position: 'relative', width: fill ? '100%' : width, height: fill ? '100%' : height }}
     >
       <motion.div 
         className="w-full h-full"

@@ -276,14 +276,14 @@ export default function Testimonials() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="page-hero">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_a4902be5d6324dd894f48768287c0740~mv2.jpg" 
             alt="Richard James Kitchens Testimonials" 
             fill
             priority
-            className="object-cover"
+            className="page-hero-image"
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

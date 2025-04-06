@@ -31,8 +31,8 @@ export default function OptimizedImage({
       src={src}
       alt={alt}
       className={className}
-      width={fill ? width : width}
-      height={fill ? height : height}
+      width={fill ? undefined : width}
+      height={fill ? undefined : height}
       fill={fill}
       priority={priority}
       sizes={sizes}

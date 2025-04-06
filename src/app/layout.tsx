@@ -25,13 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-google-analytics-opt-out="">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${montserrat.variable} ${playfair.variable} antialiased text-gray-900 bg-neutral-50`}>
+      <body 
+        className={`${montserrat.variable} ${playfair.variable} antialiased text-gray-900 bg-neutral-50`}
+        suppressHydrationWarning
+      >
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">

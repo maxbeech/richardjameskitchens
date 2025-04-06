@@ -186,9 +186,9 @@ export default function Header() {
       <div className={`hidden md:block bg-primary/90 text-white transition-all duration-300 mt-2 ${scrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
         <div className="container mx-auto px-4 py-1">
           <div className="flex justify-end items-center space-x-6 text-sm">
-            <a href="tel:07000123456" className="flex items-center hover:text-gray-200 transition-colors">
+            <a href="tel:02080500790" className="flex items-center hover:text-gray-200 transition-colors">
               <FaPhone className="h-3 w-3 mr-2" />
-              <span>07000 123456</span>
+              <span>0208 050 0790</span>
             </a>
             <a href="mailto:info@richardjameskitchens.co.uk" className="flex items-center hover:text-gray-200 transition-colors">
               <FaEnvelope className="h-3 w-3 mr-2" />

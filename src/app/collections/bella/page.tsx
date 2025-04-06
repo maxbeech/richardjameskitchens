@@ -151,17 +151,17 @@ export default function BellaRange() {
     { 
       name: 'Beaded', 
       description: 'Elegantly detailed with decorative beading', 
-      image: '/images/products/bella_range/Product images/b6b4cf_3e6faaf740fd40e8a290f6e412781b1c~mv2.jpg' 
+      image: '/images/products/bella_range/Final product in kitchen example photos/b6b4cf_fd9a4e77bd4c4e22a8a18eb3f25e50c5~mv2.jpg' 
     },
     { 
       name: 'Grooved', 
       description: 'Contemporary styling with vertical grooves', 
-      image: '/images/products/bella_range/Product images/b6b4cf_3e6faaf740fd40e8a290f6e412781b1c~mv2.jpg' 
+      image: '/images/products/bella_range/Final product in kitchen example photos/b6b4cf_a4902be5d6324dd894f48768287c0740~mv2.jpg' 
     },
     { 
       name: 'Inset', 
       description: 'Sophisticated raised panel with inset detail', 
-      image: '/images/products/bella_range/Product images/b6b4cf_3e6faaf740fd40e8a290f6e412781b1c~mv2.jpg' 
+      image: '/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_766fb14efa064c56bfcadfc3a941153d~mv2.jpg' 
     },
   ];
   
@@ -190,7 +190,7 @@ export default function BellaRange() {
       title: 'Open Plan Kitchen Design' 
     },
     { 
-      image: '/images/products/bella_range/Final product in kitchen example photos/b6b4cf_a4902be5d6324dd894f48768287c0740~mv2.jpg', 
+      image: '/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_c655d542c4cc46e2bb444fde3a8f03ae~mv2.jpg', 
       title: 'Bella Range with Integrated Appliances' 
     },
   ];

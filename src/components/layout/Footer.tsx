@@ -74,12 +74,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="w-5 h-5 text-secondary mr-3 mt-1" />
-                <span className="text-sm text-gray-300">Richard James Kitchens<br />123 Kitchen Street<br />Surrey, UK</span>
+                <span className="text-sm text-gray-300">Unit 10 - 143 Bletchingly Road<br />Merstham, Surrey<br />RH1 3QN</span>
               </li>
               <li className="flex items-center">
                 <FaPhone className="w-4 h-4 text-secondary mr-3" />
-                <a href="tel:07000123456" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  07000 123456
+                <a href="tel:02080500790" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  0208 050 0790
                 </a>
               </li>
               <li className="flex items-center">

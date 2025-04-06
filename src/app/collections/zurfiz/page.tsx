@@ -3,7 +3,8 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { FaAngleRight, FaStar, FaLeaf, FaTools, FaLightbulb } from 'react-icons/fa';
 
 // Color Variant Selector Component

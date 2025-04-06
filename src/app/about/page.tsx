@@ -35,17 +35,17 @@ export default function AboutPage() {
     {
       icon: <FaRulerCombined className="h-10 w-10 text-secondary" />,
       title: 'Precision Craftsmanship',
-      description: 'Every stitch and measurement is crafted with meticulous attention to detail, ensuring a perfect fit for your space.'
+      description: 'Every kitchen we create is built with meticulous attention to detail, ensuring a perfect fit for your space.'
     },
     {
       icon: <FaRuler className="h-10 w-10 text-secondary" />,
       title: 'Bespoke Service',
-      description: 'We offer a completely personalized experience, tailoring each project to your unique taste and requirements.'
+      description: 'We offer a completely personalized experience, tailoring each kitchen to your unique taste and requirements.'
     },
     {
       icon: <FaHeart className="h-10 w-10 text-secondary" />,
       title: 'Passion for Quality',
-      description: 'We use only premium fabrics and materials, creating soft furnishings that stand the test of time.'
+      description: 'We use only premium materials, creating kitchens that stand the test of time.'
     },
     {
       icon: <MdOutlineHandshake className="h-10 w-10 text-secondary" />,
@@ -56,24 +56,24 @@ export default function AboutPage() {
 
   const timelineEvents = [
     {
-      year: 2023,
+      year: 1,
       title: 'Consultation',
       description: 'We begin with an in-depth consultation to understand your style, preferences, and the unique requirements of your space.'
     },
     {
-      year: 2023,
+      year: 2,
       title: 'Design',
-      description: 'From fabric selection to finalizing designs, we work together to create window treatments that perfectly complement your interiors.'
+      description: 'From material selection to finalizing designs, we work together to create kitchens that perfectly complement your home.'
     },
     {
-      year: 2023,
+      year: 3,
       title: 'Crafting',
-      description: 'Each piece is handmade in our Horsell studio with precision and care, ensuring exceptional quality in every detail.'
+      description: 'Each kitchen is handmade with precision and care, ensuring exceptional quality in every detail.'
     },
     {
-      year: 2023,
+      year: 4,
       title: 'Installation',
-      description: 'We handle the professional installation of your bespoke creations, completing the transformation of your space.'
+      description: 'We handle the professional installation of your bespoke kitchen, completing the transformation of your space.'
     }
   ];
 
@@ -83,8 +83,8 @@ export default function AboutPage() {
       <section className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0">
           <ParallaxImage 
-            src="/images/sofa-zoom_in-1.jpeg" 
-            alt="Bramble & Bay Interiors craftsmanship"
+            src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_a4902be5d6324dd894f48768287c0740~mv2.jpg" 
+            alt="Richard James Kitchens craftsmanship"
             speed={-10}
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4">
             <HeroHeading
-              title="About Bramble & Bay Interiors"
+              title="About Richard James Kitchens"
               className="text-5xl font-serif text-white font-medium max-w-3xl"
             />
           </div>
@@ -106,13 +106,13 @@ export default function AboutPage() {
             <FadeIn className="order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Our Story</h2>
               <p className="text-lg text-gray-700 mb-4">
-                Bramble & Bay Interiors was born from a passion for beautiful, handcrafted soft furnishings and a commitment to exceptional quality and personal service.
+                Richard James Kitchens was born from a passion for beautiful, handcrafted kitchens and a commitment to exceptional quality and personal service.
               </p>
               <p className="text-lg text-gray-700 mb-4">
-                We specialize in creating bespoke curtains, blinds, and soft furnishings that transform spaces and add unique, elegant finishing touches to your home. Each piece is made-to-measure and handcrafted with meticulous attention to detail in our Horsell studio.
+                We specialize in creating bespoke kitchen solutions that transform spaces and add unique, elegant finishing touches to your home. Each kitchen is made-to-measure and handcrafted with meticulous attention to detail.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Working with clients across Surrey and Hampshire, we pride ourselves on offering a complete and personalized service, guiding you through every step of the process from initial consultation and fabric selection to final installation.
+                Working with clients across Surrey and London, we pride ourselves on offering a complete and personalized service, guiding you through every step of the process from initial consultation and material selection to final installation.
               </p>
               <div className="mt-8">
                 <Link href="/contact" className="btn btn-primary">
@@ -126,8 +126,8 @@ export default function AboutPage() {
             <FadeIn delay={0.2} className="order-1 lg:order-2">
               <div className="relative h-[500px] overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="/images/curtain-zoom_in-1.jpeg"
-                  alt="Bramble & Bay Workshop"
+                  src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_fd9a4e77bd4c4e22a8a18eb3f25e50c5~mv2.jpg"
+                  alt="Richard James Kitchens Workshop"
                   fill
                   className="object-cover"
                 />
@@ -144,7 +144,7 @@ export default function AboutPage() {
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">Our Values</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                At Bramble & Bay Interiors, we're dedicated to exceptional craftsmanship, attention to detail, and a truly personalized service for every client.
+                At Richard James Kitchens, we're dedicated to exceptional craftsmanship, attention to detail, and a truly personalized service for every client.
               </p>
             </FadeIn>
           </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">Our Process</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                From the initial consultation to the final installation, we guide you through each step of creating your perfect bespoke soft furnishings.
+                From the initial consultation to the final installation, we guide you through each step of creating your perfect bespoke kitchen.
               </p>
             </FadeIn>
           </div>
@@ -196,8 +196,8 @@ export default function AboutPage() {
             <FadeIn>
               <div className="relative h-[500px] overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="/images/chairs-1.webp"
-                  alt="Suzy from Bramble & Bay Interiors"
+                  src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_c655d542c4cc46e2bb444fde3a8f03ae~mv2.jpg"
+                  alt="Richard James Kitchens Team"
                   fill
                   className="object-cover"
                 />
@@ -206,13 +206,13 @@ export default function AboutPage() {
             <FadeIn delay={0.2}>
               <h2 className="text-3xl md:text-4xl font-serif text-primary mb-6">Meet the Team</h2>
               <p className="text-lg text-gray-700 mb-4">
-                Bramble & Bay Interiors is led by Suzy, whose passion for textile design and interior decorating is reflected in every project. With an eye for detail and a commitment to quality, Suzy has established a reputation for creating beautiful, bespoke soft furnishings that exceed client expectations.
+                Richard James Kitchens is led by a team of experienced kitchen designers and craftsmen with a passion for creating exceptional bespoke kitchens. With an eye for detail and a commitment to quality, our team has established a reputation for creating beautiful kitchen solutions that exceed client expectations.
               </p>
               <p className="text-lg text-gray-700 mb-4">
-                Her expertise in fabric selection, measuring, and craftsmanship ensures that each piece is perfectly tailored to your space and style. Suzy personally oversees every project from the initial consultation through to installation, providing a truly bespoke service.
+                Our designers bring years of expertise to every project, working closely with clients to understand their unique needs and transform their ideas into stunning, functional spaces. Meanwhile, our skilled craftsmen ensure that every kitchen is built to the highest standards using the finest materials.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Working from the Horsell studio, Suzy serves clients throughout Surrey and Hampshire, bringing creativity, precision, and warmth to every interaction.
+              <p className="text-lg text-gray-700">
+                Together, we're dedicated to delivering a seamless experience from start to finish, guiding you through the entire process with professionalism and care.
               </p>
             </FadeIn>
           </div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h2 className="text-3xl font-serif text-white mb-6">Ready to Transform Your Space?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Get in touch to discuss your project and discover how our bespoke curtains, blinds, and soft furnishings can elevate your home.
+              Get in touch to discuss your project and discover how our bespoke kitchen solutions can elevate your home.
             </p>
             <Link 
               href="/contact" 

@@ -228,7 +228,7 @@ export default function Gallery() {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_2206f9c8b5a34fbfae9a79d8b8c5e9d3~mv2.jpg" 
+            src="/images/general_photos_of_doors_in_kitchens_to_be_used_throughout/b6b4cf_766fb14efa064c56bfcadfc3a941153d~mv2.jpg" 
             alt="Richard James Kitchens Gallery" 
             fill
             priority

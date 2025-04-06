@@ -188,7 +188,7 @@ export default function WiltonRange() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="hero-section h-[70vh]">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/home_hero_slider/Wilton Range final product in kitchen example 2.jpg"
@@ -231,8 +231,6 @@ export default function WiltonRange() {
             </div>
           </motion.div>
         </div>
-        
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
       </section>
       
       {/* Introduction */}

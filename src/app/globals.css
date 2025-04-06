@@ -149,6 +149,44 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Hero section for pages */
+.page-hero {
+  @apply pt-24 relative h-[60vh] flex items-center justify-center overflow-hidden;
+}
+
+.page-hero-image {
+  @apply object-cover object-center;
+}
+
+/* Add a general hero-section class for consistency */
+.hero-section {
+  @apply relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden;
+}
+
+/* Convert hero images to background images */
+.page-hero .absolute.inset-0 img,
+.hero-section .absolute.inset-0 img,
+section[class*="hero"] .absolute.inset-0 img {
+  @apply object-cover object-center w-full h-full;
+}
+
+.page-hero .absolute.inset-0,
+.hero-section .absolute.inset-0,
+section[class*="hero"] .absolute.inset-0 {
+  @apply z-0;
+}
+
+.page-hero .container,
+.hero-section .container,
+section[class*="hero"] .container {
+  @apply relative z-10;
+}
+
+/* Additional selectors for hero sections with different structures */
+section[class*="relative"][class*="overflow-hidden"] img {
+  @apply object-cover object-center w-full h-full;
+}
+
 /* Responsive typography */
 @media (min-width: 768px) {
   h1 {
